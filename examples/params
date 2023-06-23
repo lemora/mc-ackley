@@ -1,0 +1,7 @@
+ini_temp 0.1
+final_temp 0.1
+n_step 5000
+x_ini -5,-4,-3,-2,-1,0,1,2,3,4,5
+x_delta 0.5
+seed 1699
+foutname example.csv
