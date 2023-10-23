@@ -1,30 +1,29 @@
-# Monte Carlo + simulated annealing on Ackley's function
+# Metropolis MC + Simulated Annealing on Ackley's Function
 
-A simple program that runs a **Metropolis Monte Carlo** simulation with or
+A simple program that runs a **Metropolis Monte Carlo** algorithm with or
 without **simulated annealing** on **Ackley's function**. It optionally generates an
 output csv file and different plots.
 
-#### Running, the easy way:
+### Running, the easy way:
 
-- `cargo run -- -h`
-- `cargo run <param file name>` // generate csv and plots
-- `cargo run <param file name> --justcsv` // only generate csv
-- `cargo run <param file name> --noout` // don't generate output
+`cargo run <param file name> [options]`
 
-- `cargo run -- --aex` // generate pure Ackley example plots
+`cargo run -- --aex` // run pure Ackley examples
 
-An example parameter file can be found in `examples/params`.
+### Building:
 
-#### Testing:
+Build and run optimized artifacts (e.g. for external benchmarking):
 
-- Run unit tests: `cargo test`
-- Run benchmarks: `cargo bench`
+```
+cargo build -r
+target/release/ackley_mc <param file name> [options]
+```
 
-#### Building:
+### Testing/Benchmarking:
 
-Build optimized artifacts (e.g. for external benchmarking): `cargo build -r`
+Running unit tests: `cargo test`
 
-Run the optimized build: `target/release/ackley_mc <param file name> --noout`
+Running benchmarks: `cargo bench`
 
 
 ### Parameter file format
@@ -40,9 +39,14 @@ value separated by a whitespace. They are listed in the following:
 - **foutname** (string): the name of output file(s)
 
 All numeric values need to be positive.
+An example parameter file can be found in `examples/params`.
 
 ### Requirements
 
 - `gnuplot` for the benchmarking library
 - `openssl` developer tools
 - Helpful: `rustup`
+
+### Acknowledgements
+
+Based on an assignment by Prof. A. Torda from the Biomolecular Modeling Group at the ZBH, UHH
