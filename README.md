@@ -46,3 +46,7 @@ All numeric values need to be positive.
 - `gnuplot` for the benchmarking library
 - `openssl` developer tools
 - Helpful: `rustup`
+
+### Acknowledgement
+
+Based on an assignment by Prof. A. Torda from the Biomolecular Modelling Group at the ZBH, UHH
